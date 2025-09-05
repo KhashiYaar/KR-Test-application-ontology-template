@@ -1,0 +1,28 @@
+# PURL configuration for http://purl.obolibrary.org/obo/krTest
+
+idspace: KRTEST
+base_url: /obo/krTest
+
+products:
+- krTest.owl: https://raw.githubusercontent.com/KhashiYaar/KR-Test-application-ontology-template/main/krTest.owl
+- krTest.obo: https://raw.githubusercontent.com/KhashiYaar/KR-Test-application-ontology-template/main/krTest.obo
+
+term_browser: ontobee
+example_terms:
+- KRTEST_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/KhashiYaar/KR-Test-application-ontology-template/v
+
+- prefix: /tracker/
+  replacement: https://github.com/KhashiYaar/KR-Test-application-ontology-template/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/KRTEST?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/KhashiYaar/KR-Test-application-ontology-template/main/
+
